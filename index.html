@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Academia</title>
+    <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <!--Carregando o Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+               <!--<img class="imagelogo" src="images/image.png" / -->
+            <div class="col-md-12">
+                <!--Menu-->
+                 
+                <nav id='menu'>
+                    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                    <ul>
+                      <li><a href='http://'>Inicio</a></li>
+                      <li><a href='http://'>Sobre</a></li>
+                      <li><a href='http://'>Contato</a></li>
+                    </ul>
+                  </nav>
+                <!--Fim menu-->
+                  <h1 style="color: rgb(12, 12, 61);"> Cadastro Academia</h1>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <h4 style="color: rgb(22, 22, 185);">Utilize o formulário para cadastrar seu aluno</h4>
+
+                        <!-- Nome-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="nome">Nome</label>
+                            <div class="col-md-4">
+                                <input id="nome" name="nome" type="text" placeholder="Informe o nome completo"
+                                    class="form-control input-md" required="">
+
+                            </div>
+
+                        </div>
+                        <!--Data de Nascimento-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="data">Data de Nascimento</label>
+                            <div class="col-md-4">
+                                <input type="date" name="data" type="data"
+                                    placeholder="Informe a data de nascimento do aluno" class="form-control input-md"
+                                    required="">
+                            </div>
+                        </div>
+                        <!--Sexo-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="sexo">Sexo</label>
+                            <div class="col-md-4">
+                                <input id="masculino" name="sexo" type="radio" checked value="masculino">
+                                <label for="masculino">Masculino</label>
+                                <input id="feminino" name="sexo" type="radio" value="feminino">
+                                <label for="feminino">Feminino</label>
+                            </div>
+                        </div>
+
+                        <!-- Peso-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="peso">Peso</label>
+                            <div class="col-md-4">
+                                <input id="peso" name="peso" type="number" placeholder="Peso em Kg"
+                                    class="form-control input-md" required="">
+
+                            </div>
+                        </div>
+
+                        <!-- Altura-->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="altura">Altura</label>
+                            <div class="col-md-4">
+                                <input id="altura" name="altura" type="text" placeholder="Informe a altura em cm"
+                                    class="form-control input-md" required="">
+                            </div>
+                        </div>
+
+
+
+
+
+                        <!-- Button -->
+                        <button id="Salvar" name="Salvar" class="btn btn-success">📄Salvar</button>
+
+                        <button style="background-color:red" id="Limpar" name="Limpar" 
+                            class="btn btn-success">🚫Limpar</button>
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+    </div>
+   
+ <!--TABELA-->
+    <table border="1">
+
+        <tr>
+            
+            <th>#</th>
+            <th>Nome</th>
+            <th>Data de Nascimento</th>
+            <th>Sexo</th>
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>Opções</th>
+
+        </tr>
+    
+        <tr>
+            <th>1</th>
+            <th>Maicon Almeida</th>
+            <th>12/03/20003</th>
+            <th>Masculino</th>
+            <th>80</th>
+            <th>1.80</th>
+            <th> <button id="Apagar" name="Apagar" class="btn btn-sm btn-danger">🚫Apagar</button> <br>
+                <button id="Editar" name="Editar" class="btn btn-sm btn-success">📝Editar</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Yasmin Christine</th>
+            <th>13/10/2000</th>
+            <th>Feminino</th>
+            <th>70</th>
+            <th>1.56</th>
+            <th> <button id="Apagar" name="Apagar" class="btn btn-sm btn-danger">🚫Apagar</button> <br>
+                <button id="Editar" name="Editar" class="btn btn-sm btn-success">📝Editar</th>
+                </tr>
+        <tr>
+            <th>3</th>
+            <th>Thiago Marques</th>
+            <th>28/05/2000</th>
+            <th>Masculino</th>
+            <th>80</th>
+            <th>1.65</th>
+            <th> <button id="Apagar" name="Apagar" class="btn btn-sm btn-danger">🚫Apagar</button> <br>
+                <button id="Editar" name="Editar" class="btn btn-sm btn-success">📝Editar</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <th>Matheus</th>
+            <th>28/05/1999</th>
+            <th>Masculino</th>
+            <th>80</th>
+            <th>1.85</th>
+            <th> <button id="Apagar" name="Apagar" class="btn btn-sm btn-danger">🚫Apagar</button> <br>
+                <button id="Editar" name="Editar" class="btn btn-sm btn-success">📝Editar</th>
+        </tr>
+        <tr>
+            <th>5</th>
+            <th>Larissa</th>
+            <th>12/01/2003</th>
+            <th>Feminino</th>
+            <th>85</th>
+            <th>1.63</th>
+            <th> <button id="Apagar" name="Apagar" class="btn btn-sm btn-danger">🚫Apagar</button> <br>
+                <button id="Editar" name="Editar" class="btn btn-sm btn-success">📝Editar</th>
+        </tr>
+
+        <script src="js/script.js"></script>
+</body>
+
+</html>
